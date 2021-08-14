@@ -1,0 +1,143 @@
+.bodyLoader{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .MuiCircularProgress-root{
+        width:4rem !important;
+        height: 4rem !important;
+        .MuiCircularProgress-svg{
+            width: 100%;
+            height: 100%;            
+        }
+    }    
+}
+
+
+
+
+
+.body{
+    padding:  2vw 5vw;
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #474747;
+      }      
+    .MuiTableContainer-root {
+        overflow: auto;
+        height: 75vh;
+    table{
+        thead{
+            tr{
+                th{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: 18px;
+                    font-weight: 600;
+                    img{
+                        border-radius: 50%;
+                        width: 15vh;
+                    }
+                }
+            }
+        }
+    }
+  }
+  .PaginationContent{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .pagination{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 25%;
+        img{
+            width: 2.5rem;
+            cursor: pointer;
+        }
+      }    
+  }
+}
+
+@media only screen and (max-width: 600px) {
+header{
+    div{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center !important;
+        margin: 1rem 0;
+        nav{
+            align-items: center;
+        }
+    }
+}
+.body{
+    .MuiTableContainer-root {
+        width: 90vw;
+    table{
+        thead{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            tr{
+                width:100%;
+                display: flex;
+                justify-content: space-between;
+                th{
+                    width:100%;
+                    font-size: 18px;
+                }
+            }
+        }
+        tbody{
+            width:100%;
+            tr{
+                display: flex;
+                width: 100%;
+                height: 12vh;
+                justify-content: space-between;
+                align-items: center;
+                td{
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width:20%;
+                    height: 6vh;
+                    padding: 10px;                    
+                    img{
+                        width: 8vh;
+                        height: 8vh;
+                    }
+                }
+            }
+        }
+    }
+}
+    .PaginationContent{
+        margin: 1rem 0;
+        .pagination{
+            width: 80%;
+            h1{
+                font-size: 25px;
+            }
+            img{
+                width: 1.5rem;
+            }
+        }
+    }
+}
+}
