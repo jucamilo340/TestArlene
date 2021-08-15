@@ -1,20 +1,21 @@
-import React,{Fragment} from 'react';
-import { Switch, Route,Redirect } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-//Components
-import Login from './components/Login/Login'
-import Home from './components/Home'
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import Loader from './components/Utils/Loader'
 //Auth
-import auth from './Helpers/auth'
+import auth from './Helpers/auth';
+//Components
+const Login = React.lazy(() => import('./components/Login/Login'));
+const Home = React.lazy(() => import('./components/Home'));
+
 
 function App() {
   return (
     <Router>
     <Switch>
-       <Route exact path="/login" component={Login} />
-       <Fragment>        
-         <PrivateRoute exact path="/" component={Home} />
-       </Fragment>                
+     <Suspense fallback={<Loader/>}>
+       <Route exact path="/login" component={Login} />      
+       <PrivateRoute exact path="/" component={Home} /> 
+      </Suspense>                 
     </Switch>
     </Router>
   );

@@ -149,15 +149,9 @@ const Login = () => {
               </Button>
               <Grid container>
                 <Grid item xs>                 
-                </Grid>
-                {/* <Grid item>
-                  <Link onClick={()=> typeFrom? settypeFrom(false): settypeFrom(true)} variant="body2">
-                    {typeFrom?"Don't have an account? Sign Up":" Already have an account? Sign in"}
-                  </Link>
-                </Grid> */}
+                </Grid>             
               </Grid>
               <Box mt={5}>
-                {/* <Copyright /> */}
               </Box>
             </form>
           </div>
