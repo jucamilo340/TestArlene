@@ -66,7 +66,7 @@ const Home = () => {
   };
   useEffect(() => {
     getUsers(page);
-  }, []);
+  }, [page]);
   return (
     <>
       <Header />

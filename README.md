@@ -5,6 +5,9 @@ This project was made in React, consuming the rest api https://reqres.in/
 - To use the project, clone it to the team locally
 - Install the dependencies using the command `npm install`
 - Then run the project using the command `npm start`
+- You can use the following user to login:
+  -email:`eve.holt@reqres.in`
+  -password:`cityslicka`
 - Login to the application and interact with the application, good luck
 
 # Framework and styles

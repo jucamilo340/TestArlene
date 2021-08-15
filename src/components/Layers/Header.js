@@ -1,12 +1,15 @@
 import React from "react";
+//Material ui
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
+//images
 import Logo from "../../assets/logo.svg";
 import { useHistory } from "react-router-dom";
+//Authentication
 import auth from "./../../Helpers/auth";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = ({ avatarurl }) => {
+const Header = () => {
   const classes = useStyles();
   //User logged in
   var User = auth.getUser();
@@ -56,8 +59,8 @@ const Header = ({ avatarurl }) => {
       elevation={0}
       className={classes.appBar}
     >
-      <Toolbar className={classes.toolbar} className="header">
-        <img src={Logo} style={{ width: "4rem" }} />
+      <Toolbar  className="header">
+        <img src={Logo} style={{ width: "4rem" }} alt=""/>
         <Typography
           variant="h6"
           color="inherit"
@@ -67,7 +70,7 @@ const Header = ({ avatarurl }) => {
           ARLENE TEST
         </Typography>
         <nav className={classes.nav}>
-          <Avatar alt="Remy Sharp" src={avatarurl} />
+          <Avatar alt="Remy Sharp"  />
           <Typography
             variant="button"
             color="textPrimary"
@@ -78,7 +81,6 @@ const Header = ({ avatarurl }) => {
           </Typography>
         </nav>
         <Button
-          href="#"
           color="primary"
           variant="outlined"
           className={classes.link}
