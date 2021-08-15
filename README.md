@@ -8,7 +8,7 @@ This project was made in React, consuming the rest api https://reqres.in/
 - Login to the application and interact with the application, good luck
 
 # Framework and styles
-- sass y material ui
+- sass and material ui
 
 
 ## Available Scripts
